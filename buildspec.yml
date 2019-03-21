@@ -6,19 +6,21 @@ phases:
       # Upgrade AWS CLI to the latest version
       - pip install --upgrade pip
       - pip install --upgrade awscli
+      - pip install --upgrade maven
       # update system packages
       # - apt update -y
       # - apt upgrade -y
       # install basic tools
       # - apt-get install -y git
       # Source: https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-18-04
-      - apt install -y openjdk-11-jre
-      # - apt install -y openjdk-11-jdk
+      # - apt install -y openjdk-11-jre
+      - apt install -y openjdk-11-jdk
       - apt autoremove
       # if we need to set the version of java
       # alternatives --config java
       # Export ENV JAVA_HOME
       #- export JAVA_HOME=/usr
+      - unset MAVEN_CONFIG && env && ./mvnw effective-settings
       # output java version
       - which java
       - java -version
