@@ -11,7 +11,7 @@ phases:
       - apt-get upgrade -y
       # install basic tools
       # - apt-get install -y git
-      # upgrade java to 1.8
+      # Source: https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-18-04
       - apt install openjdk-11-jre
       - apt install openjdk-11-jdk
       # if we need to set the version of java
