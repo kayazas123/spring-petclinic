@@ -7,16 +7,16 @@ phases:
       - pip install --upgrade pip
       - pip install --upgrade awscli
       # update system packages
-      - apt-get update -y && apt-get upgrade -y
+      # - apt-get update -y && apt-get upgrade -y
       # install basic tools
-      - apt-get install -y git
+      # - apt-get install -y git
       # upgrade java to 1.8
-      - apt-get install -y java-1.8.0-openjdk
-      - apt-get install -y java-1.8.0-openjdk-devel
+      # - apt-get install -y java-1.8.0-openjdk
+      # - apt-get install -y java-1.8.0-openjdk-devel
       # if we need to set the version of java
       # alternatives --config java
       # Export ENV JAVA_HOME
-      - export JAVA_HOME=
+      # - export JAVA_HOME=/usr
       # output java version
       - java -version
   pre_build:
