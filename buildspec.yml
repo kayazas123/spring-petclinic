@@ -12,8 +12,7 @@ phases:
       # install basic tools
       # - apt-get install -y git
       # upgrade java to 1.8
-      - apt-get install -y java-1.8.0-openjdk
-      - apt-get install -y java-1.8.0-openjdk-devel
+      - apt install default-jre
       # if we need to set the version of java
       # alternatives --config java
       # Export ENV JAVA_HOME
