@@ -7,16 +7,17 @@ phases:
       - pip install --upgrade pip
       - pip install --upgrade awscli
       # update system packages
-      # - apt-get update -y && apt-get upgrade -y
+      - apt-get update -y
+      - apt-get upgrade -y
       # install basic tools
       # - apt-get install -y git
       # upgrade java to 1.8
-      # - apt-get install -y java-1.8.0-openjdk
-      # - apt-get install -y java-1.8.0-openjdk-devel
+      - apt-get install -y java-1.8.0-openjdk
+      - apt-get install -y java-1.8.0-openjdk-devel
       # if we need to set the version of java
       # alternatives --config java
       # Export ENV JAVA_HOME
-      # - export JAVA_HOME=/usr
+      - export JAVA_HOME=/usr
       # output java version
       - java -version
   pre_build:
@@ -29,7 +30,7 @@ phases:
     commands:
       # Do not remove this statement. This command is required for AWS CodeStar projects.
       # Update the AWS Partition, AWS Region, account ID and project ID in the project ARN on template-configuration.json file so AWS CloudFormation can tag project resources.
-      - sed -i.bak 's/\$PARTITION\$/'${PARTITION}'/g;s/\$AWS_REGION\$/'${AWS_REGION}'/g;s/\$ACCOUNT_ID\$/'${ACCOUNT_ID}'/g;s/\$PROJECT_ID\$/'${PROJECT_ID}'/g' template-configuration.json
+      # - sed -i.bak 's/\$PARTITION\$/'${PARTITION}'/g;s/\$AWS_REGION\$/'${AWS_REGION}'/g;s/\$ACCOUNT_ID\$/'${ACCOUNT_ID}'/g;s/\$PROJECT_ID\$/'${PROJECT_ID}'/g' template-configuration.json
 artifacts:
   type: zip
   files:
