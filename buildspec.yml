@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      # Use Open JDK 8
+      # Spring-Boot Pet Clinic uses Open JDK 8
       # Source https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-18-04
       - apt-get install -y awscli git htop maven openjdk-8-jdk vim
       - which java
@@ -23,7 +23,5 @@ artifacts:
   type: zip
   files:
     - 'appspec.yml'
-    - 'template.yml'
     - 'scripts/*'
-    - 'target/ROOT.war'
-    - 'template-configuration.json'
+    - 'target/petclinic.war'
