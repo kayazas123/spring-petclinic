@@ -9,10 +9,10 @@ phases:
       - pip install --upgrade awscli pip
   pre_build:
     commands:
-      - ./mvnw clean compile test
+      - mvn clean compile test
   build:
     commands:
-      - ./mvnw package
+      - mvn package
   post_build:
     commands:
       # Do not remove this statement. This command is required for AWS CodeStar projects.
