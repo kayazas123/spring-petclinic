@@ -9,7 +9,7 @@ phases:
       - pip install --upgrade awscli pip
   pre_build:
     commands:
-      - mvn clean compile test
+      # - mvn clean compile test # Not really needed, 'package' runs all thje same goals.
   build:
     commands:
       - mvn package
