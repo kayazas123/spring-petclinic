@@ -5,6 +5,8 @@ phases:
     commands:
       # Upgrade AWS CLI to the latest version
       - pip install --upgrade awscli
+      - apt install -y openjdk-8-jdk
+      - update-java-alternatives -s java-1.8.0-openjdk-amd64
   pre_build:
     commands:
       - ./mvnw clean compile test
